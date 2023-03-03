@@ -8,10 +8,21 @@
 import SwiftUI
 
 @main
-struct Scrumdinger_iOS_App_Dev_Tutorials_App: App {
+struct ScrumdingerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ScrumsView(scrums: DailyScrum.sampleData)
+            }
         }
     }
 }
+//struct Scrumdinger_iOS_App_Dev_Tutorials_App: App {
+//    var scrum = DailyScrum.sampleData[0]
+//    var body: some Scene {
+//        WindowGroup {
+//                CardView(scrum: scrum)
+//        }
+//    }
+//}
+
