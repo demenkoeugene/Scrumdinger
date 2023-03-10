@@ -10,7 +10,7 @@ import SwiftUI
 struct ScrumsView: View {
     @Binding var scrums: [DailyScrum]
     
-    //You’ll observe this value and save user data when it becomes inactive.
+    //observe this value and save user data when it becomes inactive.
     @Environment(\.scenePhase) private var scenePhase
     @State private var isPresentingNewScrumView = false
     @State private var newScrumData = DailyScrum.Data()
@@ -60,7 +60,7 @@ struct ScrumsView: View {
         .onChange(of: scenePhase) { phase in
             if phase == .inactive { saveAction() }
         }
-        //You can use onChange(of:perform:) to trigger actions when a specified value changes. A scene in the inactive phase no longer receives events and may be unavailable to the user.
+        ///You can use onChange(of:perform:) to trigger actions when a specified value changes. A scene in the inactive phase no longer receives events and may be unavailable to the user.
     }
 }
 

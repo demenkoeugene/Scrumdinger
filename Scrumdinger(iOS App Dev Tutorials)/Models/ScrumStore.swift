@@ -41,7 +41,7 @@ class ScrumStore: ObservableObject {
                                    }
                                    return
                 }
-                let dailyScrums = try JSONDecoder().decode([DailyScrum].self, from: file.availableData)
+                _ = try JSONDecoder().decode([DailyScrum].self, from: file.availableData)
             } catch {
                 DispatchQueue.main.async {
                                    completion(.failure(error))
